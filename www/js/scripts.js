@@ -544,7 +544,7 @@ function AddAllConsolesTile()
 	
 	newConsole.id = "AllGames";
 		
-	newConsole.style.backgroundImage = "url('AllGames.png')";
+	newConsole.style.backgroundImage = "url('/AllGames.png')";
 	
 	consoleList.appendChild(newConsole);		
 }
@@ -558,7 +558,7 @@ function AddNewConsoleByName(consoleChosen)
 	
 	newConsole.id = consoleChosen;
 		
-	newConsole.style.backgroundImage = "url('" + consoleChosen + "_logo.png')";
+	newConsole.style.backgroundImage = "url('/" + consoleChosen + "_logo.png')";
 	
 	consoleList.appendChild(newConsole);		
 	
