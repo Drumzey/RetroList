@@ -30,20 +30,6 @@
 	
 	}
 	
-	/*.checkBoxLeft{
-    position: absolute; 
-    left: 0px; 
-    top: 28%;
-    width: 18px;
-    height: 18px;
-    background: #d9d9d9;
-    border-radius: 3px;  
-	}
-
-	.detailListText{
-		margin: 0 0 0 20px;
-	}*/
-	
 	.popup
 	{
 		width: 90vw;
@@ -117,7 +103,7 @@
 	.tile
 	{
 		margin: 0 0 2.5vw 2.5vw !important;
-		width: 40vw !important;
+		width: 40vw !important; 
 		height: 40vw !important;
 		border-radius: 1em 1em 1em 1em !important;		
 		background-color: #CC9B08;
