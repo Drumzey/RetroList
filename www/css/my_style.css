@@ -1,0 +1,141 @@
+	
+	@font-face {
+    font-family: "customfont";
+    src: url("../res/PressStart2P.ttf");   
+        
+    }
+	
+	.ui-icon-retro-cart:after {
+	background-image: url("../img/app-icon-cart.png");
+	background-repeat: no-repeat;	
+	}
+	
+	.ui-icon-retro-console:after {
+	background-image: url("../img/app-icon-console.png");
+	background-repeat: no-repeat;	
+	}
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-retro-cart :after{
+		background-image: url("../img/app-icon-cart-highres.png");
+		background-size: 18px 18px;
+		background-repeat: no-repeat;		
+	}
+	
+	.ui-icon-retro-console :after{
+		background-image: url("../img/app-icon-console-highres.png");
+		background-size: 30px 25px;
+		background-repeat: no-repeat;		
+	}
+	
+	}
+	
+	/*.checkBoxLeft{
+    position: absolute; 
+    left: 0px; 
+    top: 28%;
+    width: 18px;
+    height: 18px;
+    background: #d9d9d9;
+    border-radius: 3px;  
+	}
+
+	.detailListText{
+		margin: 0 0 0 20px;
+	}*/
+	
+	.popup
+	{
+		width: 90vw;
+	}
+	
+	html, body, option
+	{
+		height: 100%;
+		width: 100%;	
+        font-family: "customfont";
+	}
+	
+	span, div, label, input
+	{
+	    font-family: "customfont" !important;
+	}
+	
+	.MainMenu
+	{
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+	
+	.ui-content-no-padding { 
+		padding: 0 !important;
+		margin: 0px !important;		
+		width: 100% !important;
+	}
+	
+	embed
+	{
+	    height: 100% !important;
+		width: 100% !important;
+	}
+	
+	.Map
+	{
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
+	
+	.image
+	{
+		position:relative;
+		align: center;
+	}
+
+	.ui-input-text #myinput 
+	{
+	   margin-top:0;
+	   margin-bottom:0;
+	   margin-right:0;
+	   margin-left:0;
+	}
+	
+	.ui-title {
+		margin: 0em 10% 0em !important;
+	}
+	
+	.TwoColumn
+	{	
+		margin-top: 10px;				
+		-webkit-column-count: 2;
+		column-count: 2;	
+		-webkit-column-gap: 10px;
+		-moz-column-gap: 10px;
+		column-gap: 10vw;		
+	}
+			
+	.tile
+	{
+		margin: 0 0 2.5vw 2.5vw !important;
+		width: 40vw !important;
+		height: 40vw !important;
+		border-radius: 1em 1em 1em 1em !important;		
+		background-color: #CC9B08;
+		border: 2px solid black !important;
+		
+		overflow: hidden; /* Fix for firefox and IE 10-11  */
+		-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+		page-break-inside: avoid; /* Deprecated Firefox */
+		-moz-column-break-inside:avoid; /* Current Firefox */
+		column-break-inside:avoid;
+		break-inside: avoid; /* IE 10+ */
+		break-inside: avoid-column;
+		
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+	
+	.console
+	{		
+		
+	}

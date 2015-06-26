@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <script type="text/javascript" src="js/index.js"></script>		
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>		
+		<script>
+			$(document).bind("mobileinit", function() {
+				$.mobile.defaultPageTransition = 'none';
+			});
+		</script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile.utils.js"></script>
+		
+		<script type='text/javascript' >
+			var threedo = ''; // DONE AND ADDED READY FOR TEST
+			var amigacd32 = '';
+			var atari2600 = ''; // DONE AND ADDED READY FOR TEST
+			var atari5200 = '';
+			var atari7800 = ''; // DONE AND ADDED READY FOR TEST
+			var lynx = ''; // DONE AND ADDED READY FOR TEST
+			var jaguar = ''; // DONE AND ADDED READY FOR TEST
+			var st = '';					
+			var c64 = '';
+			var dreamcast = ''; // DONE AND ADDED READY FOR TEST
+			var gamecube = ''; //
+			var gamegear = ''; // DONE AND ADDED READY FOR TEST
+			var gameboy = '';			
+			var mastersystem = '';
+			var megadrive = ''; //
+			var n64 = ''; // DONE AND ADDED READY FOR TEST
+			var pcengine = '';
+			var neogeo = ''; //
+			var neogeocd = ''; //
+			var nes = ''; // DONE AND ADDED READY FOR TEST
+			var pcfx = '';
+			var playstation = ''; //
+			var saturn = ''; //
+			var snes = ''; // DONE AND ADDED READY FOR TEST
+			var turbografx16 = '';
+			var virtualboy = ''; //
+		</script>
+		
+		<script type="text/javascript" src="js/gamelists/snes.js"></script>
+		<script type="text/javascript" src="js/gamelists/nes.js"></script>
+		<script type="text/javascript" src="js/gamelists/lynx.js"></script>
+		<script type="text/javascript" src="js/gamelists/3do.js"></script>
+		<script type="text/javascript" src="js/gamelists/jaguar.js"></script>
+		<script type="text/javascript" src="js/gamelists/gamegear.js"></script>
+		<script type="text/javascript" src="js/gamelists/dreamcast.js"></script>
+		<script type="text/javascript" src="js/gamelists/n64.js"></script>
+		<script type="text/javascript" src="js/gamelists/atari2600.js"></script>
+		<script type="text/javascript" src="js/gamelists/atari7800.js"></script>
+		
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<!--<script type="text/javascript" src="js/auth.js"></script>
+		<script type="text/javascript" src="js/search.js"></script>-->
+		
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />					
+		<link rel="stylesheet" type="text/css" href="css/themes/Retro.css" />
+		<link rel="stylesheet" type="text/css" href="css/themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/my_style.css" />
+		<link id="secondstyle" rel="stylesheet" type="text/css" href="css/pacman.css" />
+        
+		<title>Retro Games</title>
+		
+    </head>
+    <body>
+        
+		<!-- Templates -->		
+		<div style="display: hidden">
+		    <div onclick="GoToConsole(this)" id="AddConsoleTemplate" class="tile" data-iconpos="notext" data-role="button" data-mini="true" data-icon="plus" ></div>	
+			<div onclick="AllGamesIHave()" id="AllTemplate" class="tile" data-iconpos="notext" data-role="button" data-mini="true" data-icon="plus" ></div>	
+		</div>
+		<!-- end of templates -->
+		
+		<!-- Start of page -->
+		
+		<div data-role="page" data-theme="e" id="MainMenu" class="MainMenu">				
+			
+			<!-- Pop ups -->		
+
+			<!-- NO INTERNET -->
+			<div id="NoNet" data-dismissible="false" data-role="popup" class="popup ui-corner-all ui-popup ui-overlay-shadow" aria-disabled="false" data-disabled="false" data-shadow="true" data-corners="true" data-transition="none" data-position-to="origin">	
+				<div data-role="content" data-theme="e" class="ui-corner-bottom ui-content" role="main">
+					<h1>Sorry!</h1>					
+					<h5>You appear not to have an internet connection at the moment. Try again later.</h5>					
+					<a data-role="button" data-rel="back" data-theme="e" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">OK</span></span></a>					
+				</div>
+			</div>
+			
+			<!-- About -->
+			<div id="About" data-dismissible="false" data-role="popup" class="popup ui-corner-all ui-popup ui-overlay-shadow" aria-disabled="false" data-disabled="false" data-shadow="true" data-corners="true" data-transition="none" data-position-to="origin">	
+				<div data-role="content" data-theme="e" class="ui-corner-bottom ui-content" role="main">
+					<h1>Hello!</h1>					
+					<h5>Welcome to My Collection. A place to catalogue your retro titles, research new ones, watch videos and even help you buy them online.</h5>
+					<h5>Just add your consoles, select the games you have and the ones you want. Follow the links to Wikipedia, Youtube and treat yourself by visiting Ebay and add to your collection! As lemmings would say...</h5>							
+					<a data-role="button" data-rel="back" data-theme="e" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Lets go!</span></span></a>					
+				</div>
+			</div>
+			
+			<!-- Delete Console -->	
+			<div id="DeleteConsole" data-dismissible="false" data-role="popup" class="popup ui-corner-all ui-popup ui-overlay-shadow" aria-disabled="false" data-disabled="false" data-shadow="true" data-corners="true" data-transition="none" data-position-to="origin">	
+				<div data-role="content" data-theme="e" class="ui-corner-bottom ui-content" role="main">
+					<h1>Delete Console</h1>					
+					<h3 id="deleteMessage">Are you sure you want to delete your records for this console?</h3>							
+					<a onclick="DeleteConsole()" data-role="button" data-rel="back" data-theme="e" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">OK</span></span></a>    
+					<a data-role="button" data-rel="back" data-theme="e" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Cancel</span></span></a>    
+				</div>
+			</div>
+			
+			<!-- Add new Console -->
+			
+			<div id="NewConsole" data-dismissible="false" data-role="popup" class="popup ui-corner-all ui-popup ui-overlay-shadow" aria-disabled="false" data-disabled="false" data-shadow="true" data-corners="true" data-transition="none" data-position-to="origin">	
+				<div data-role="content" data-theme="e" class="ui-corner-bottom ui-content" role="main">
+					<h1>New Console</h1>					
+					<select name="console-choice" id="console-choice">						
+					</select>								
+					<a onclick="AddNewConsole()" data-role="button" data-rel="back" data-theme="e" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">OK</span></span></a>    
+					<a data-role="button" data-rel="back" data-theme="e" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Cancel</span></span></a>    
+				</div>
+			</div>
+			
+			<!-- Setup -->
+			
+			<div id="Setup" data-dismissible="false" data-role="popup" class="ui-corner-all ui-popup ui-overlay-shadow" aria-disabled="false" data-disabled="false" data-shadow="true" data-corners="true" data-transition="none" data-position-to="origin">	
+				<div data-role="content" data-theme="e" class="ui-corner-bottom ui-content " role="main">	
+
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>Choose a theme:</legend>
+							<input type="radio" name="radio-choice" id="rc-theme-mario" value="mario"  />
+							<label for="rc-theme-mario">Mario</label>
+							<input type="radio" name="radio-choice" id="rc-theme-pacman" value="pacman"/>
+							<label for="rc-theme-pacman">Pacman</label>
+							<input type="radio" name="radio-choice" id="rc-theme-zelda" value="zelda"  />
+							<label for="rc-theme-zelda">Zelda</label>
+							<input type="radio" name="radio-choice" id="rc-theme-donkey" value="donkey"  />
+							<label for="rc-theme-donkey">Donkey Kong</label>
+					</fieldset>		
+				</div>
+				
+				<!--<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>Console icon:</legend>
+							<input type="radio" name="radio-choice2" id="rc-pic-logo" value="logo" checked="checked"/>
+							<label for="rc-pic-logo">Logo</label>
+							<input type="radio" name="radio-choice2" id="rc-pic-console" value="console"/>
+							<label for="rc-pic-console">Console</label>
+							<input type="radio" name="radio-choice2" id="rc-pic-pixel" value="pixel"  />
+							<label for="rc-pic-pixel">Pixel</label>							
+					</fieldset>		
+				</div>-->
+				
+				<a onclick="UpdateTheme()" data-role="button" data-rel="back" data-theme="e" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">OK</span></span></a>    
+				<a data-role="button" data-rel="back" data-theme="e" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Cancel</span></span></a>    
+				
+				</div>
+			</div>
+			
+			
+			<!-- end of pop ups -->
+			
+			<div data-role="header" data-position="fixed">
+                <img src="img/app-icon-snes.png" style="float: left; margin: 5px;"/><span id="numberConsoles" style="float: left; margin-top: 7px;">0</span>
+				<span id="numberGames" style="float: right; margin-top: 7px; margin-right: 5px;">0</span><img src="img/app-icon-snescart.png" style="float: right; margin: 5px;"/>
+				<h1 style="font-weight: bold; font-size:100%";>My Collection</h1>
+				<div style="text-align:center">				
+				<a onclick="About()" rel="external" data-role="button" data-icon="info" data-transition="none"><span style="font-size:70%">About</span></a>
+				<a onclick="AddConsole()" rel="external" data-role="button" data-icon="plus" data-transition="none"><span style="font-size:70%">Add</span></a>
+				<a onclick="Setup()" data-role="button" data-icon="gear" data-transition="none"><span style="font-size:70%">Setup</span></a>								
+				<!--<a onclick="AllGamesIHave()" data-role="button" data-icon="gear" data-transition="none"><span style="font-size:70%">All Games</span></a>-->
+				</div>
+            </div>
+			
+			<div role="main" class="ui-content Page">
+				<!-- tiles go here -->
+				<section id="ConsolePanel" class="TwoColumn">					
+				</section>
+			</div>
+			
+			<div data-role="footer" data-position="fixed">
+                <h1 style="font-weight: bold; font-size:60%">&#169; Rich Rumsey 2015</h1>
+            </div>
+			
+		</div>		
+        
+		<div data-role="page" data-theme="e" id="Everything" class="MainMenu">
+		
+			<div data-role="header" data-position="fixed">
+                <h1 style="font-weight: bold; font-size:100%";>My Collection</h1>      
+				<a href="#MainMenu" rel="external" data-role="button" data-icon="back" data-transition="none"><span style="font-size:70%">Back</span></a>				
+            </div>
+		
+			<div role="main" class="ui-content Page">
+							
+				<div id="allGames">
+					<ul id="allGamesul" data-mini="true" data-role="listview" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">												
+					</ul>
+				</div>				
+			
+			</div>
+		
+			<div data-role="footer" data-position="fixed">
+                <h1 style="font-weight: bold; font-size:60%">&#169; Rich Rumsey 2015</h1>
+            </div>
+		
+		</div>
+		
+		<div data-role="page" data-theme="e" id="Console" class="MainMenu">
+		
+			<div data-role="header" data-position="fixed">
+                <h1 id="GameCollection" style="font-weight: bold; font-size:100%";>Console</h1>      
+				<a href="#MainMenu" rel="external" data-role="button" data-icon="back" data-transition="none"><span style="font-size:70%">Back</span></a>				
+            </div>
+		
+			<div role="main" class="ui-content Page">
+			
+			<div data-role="tabs" class="tabs">
+				
+				<div data-role="navbar">
+					<ul>
+					  <li><a id="GotTab" onclick="SetCurrentTab('GotTab')" href="#one" data-theme="e" data-ajax="false" class="ui-btn-active"><span>Got</span></a></li>
+					  <li><a id="NeedTab" onclick="SetCurrentTab('NeedTab')" href="#two" data-theme="e" data-ajax="false"><span>Need</span></a></li>
+					  <li><a id="AllTab" onclick="SetCurrentTab('AllTab')" href="#three" data-theme="e" data-ajax="false"><span>All</span></a></li>
+					</ul>
+				</div>
+					
+				<div id="one" class="ui-content">
+					<div id="gamelistgot">
+						<ul id="gamelistgotul" data-mini="true" data-autodividers="true" data-role="listview" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">												
+						</ul>
+					</div>					
+				</div>
+					
+				<div id="two" class="ui-content">				    					
+					<div id="gamelistwant">
+						<ul id="gamelistwantul" data-mini="true" data-autodividers="true" data-role="listview" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">												
+						</ul>
+					</div>						
+				</div>
+					
+				<div id="three" class="ui-content">		
+					<div id="gamelist">
+						<ul id="gamelistul" data-mini="true" data-autodividers="true" data-role="listview" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">												
+						</ul>
+					</div>				
+				</div>
+			
+			</div>
+		
+			<div data-role="footer" data-position="fixed">
+                <h1 style="font-weight: bold; font-size:60%">&#169; Rich Rumsey 2015</h1>
+            </div>
+		
+		</div>
+		</div>
+		
+		<div data-role="page" data-theme="e" id="Game" class="MainMenu">
+		
+			<!-- No WIKI pop up-->	
+			<div id="NoWikiPage" data-dismissible="false" data-role="popup" class="popup ui-corner-all ui-popup ui-overlay-shadow" aria-disabled="false" data-disabled="false" data-shadow="true" data-corners="true" data-transition="none" data-position-to="origin">	
+				<div data-role="content" data-theme="e" class="ui-corner-bottom ui-content" role="main">
+					<h1>Sorry</h1>					
+					<h3>No wiki page exists for this game. If you know of a page then please contact us and we will update accordingly</h3>
+					<a data-role="button" data-rel="back" data-theme="e" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">OK</span></span></a>    					
+				</div>
+			</div>
+		
+			<div data-role="header" data-position="fixed">
+                <h1 id="GameName" style="font-weight: bold; font-size:100%";>Game</h1>      
+				<a onclick="Rehighlight()" href="#Console" rel="external" data-role="button" data-icon="back" data-transition="none"><span style="font-size:70%">Back</span></a>				
+            </div>
+		
+			<div role="main" class="ui-content Page">	
+				<div style="height: 50vh">				  
+				  <div>
+					<ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
+						<li id="release" class="ui-li ui-li-static ui-btn-up-c">Release</li>
+						<li id="genre" class="ui-li ui-li-static ui-btn-up-c">Genre</li>
+						<li id="developer" class="ui-li ui-li-static ui-btn-up-c">Developer</li>
+						<li id="region" class="ui-li ui-li-static ui-btn-up-c">Region</li>						
+					</ul>				
+				  </div>
+				
+				<fieldset data-role="controlgroup" data-type="horizontal" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal">
+					<div class="ui-controlgroup-controls">
+	     	
+						<div class="ui-radio">
+							<input onclick="ChangeGameStatus()" type="radio" name="radio-view" id="gndw-got" value="got">
+							<label for="gndw-got" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-radio-off ui-corner-left ui-btn-up-c">
+							<span class="ui-btn-inner ui-corner-left">
+								<span class="ui-btn-text">Got</span>
+							</span>
+							</label>
+						</div>
+	         	
+						<div class="ui-radio">
+							<input onclick="ChangeGameStatus()" type="radio" name="radio-view" id="gndw-need" value="need">
+							<label for="gndw-need" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-radio-off ui-corner-left ui-btn-up-c">
+							<span class="ui-btn-inner ui-corner-left">
+								<span class="ui-btn-text">Need</span>
+							</span>
+							</label>
+						</div>
+						
+						<div class="ui-radio">
+							<input onclick="ChangeGameStatus()" checked="checked" type="radio" name="radio-view" id="gndw-dontwant" value="dontwant">
+							<label for="gndw-dontwant" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-radio-off ui-corner-left ui-btn-up-c">
+							<span class="ui-btn-inner ui-corner-left">
+								<span class="ui-btn-text">Dont want</span>
+							</span>
+							</label>
+						</div>
+	         	
+					</div>
+				</fieldset>				  
+				
+				</div>				
+				<div data-role="controlgroup">
+					<a id="wikibutton" href="#" onclick="GoToWikipedia()" data-role="button"><span>Wikipedia</span></a>
+					<a href="#" onclick="GoToYoutube()" data-role="button"><span>Youtube</span></a>
+					<a href="#" data-role="button"><span>Ebay</span></a>
+				</div>				
+			</div>
+		
+			<div data-role="footer" data-position="fixed">
+                <h1 style="font-weight: bold; font-size:60%">&#169; Rich Rumsey 2015</h1>
+            </div>
+		
+		</div>
+		
+		<div data-role="page" data-theme="e" id="Wikipedia" class="MainMenu">
+			
+			<div data-role="header" data-position="fixed">
+                <h1 id="" style="font-weight: bold; font-size:100%";>Wikipedia</h1>      
+				<a href="#Game" rel="external" data-role="button" data-icon="back" data-transition="none"><span style="font-size:70%">Back</span></a>				
+            </div>
+		
+			<div role="main" class="ui-content-no-padding" style="height: 100vh;">
+				<embed id="WikiPage" src="http://en.m.wikipedia.org">
+			</div>
+		
+			<!--<div data-role="footer" data-position="fixed">
+                <h1 style="font-weight: bold; font-size:60%">&#169; Rich Rumsey &amp; Tom Lever 2015</h1>
+            </div>-->
+		
+		</div>			
+		
+		<div data-role="page" data-theme="e" id="Youtube" class="MainMenu">
+		
+			<div data-role="header" data-position="fixed">
+                <h1 id="GameName" style="font-weight: bold; font-size:100%";>Youtube</h1>      
+				<a href="#Game" rel="external" data-role="button" data-icon="back" data-transition="none"><span style="font-size:70%">Back</span></a>				
+            </div>
+		
+			<div role="main" class="ui-content Page">
+				<div id="search-container">
+				</div>			
+			</div>
+		
+			<div data-role="footer" data-position="fixed">
+                <h1 style="font-weight: bold; font-size:60%">&#169; Rich Rumsey 2015</h1>
+            </div>
+		
+		</div>		
+		
+        <script type="text/javascript">
+            app.initialize();
+			
+			$(document).on("pagebeforeshow", function()
+            {			
+			    init();								
+			});
+			
+			$(document).on("pagecreate", function()
+            {			
+			    $.mobile.loading('hide');
+			});			
+			
+        </script>
+    </body>
+</html>

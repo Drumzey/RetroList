@@ -1,0 +1,10 @@
+
+	ui-loader .ui-icon {
+		background-image: url(themes/images/donkeykong.gif);		
+	} 
+
+	.ui-icon-loading {  
+		background-image: url(themes/images/donkeykong.gif);
+		background-size: 46px 46px;				
+	}	
+	

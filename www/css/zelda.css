@@ -1,0 +1,9 @@
+
+	ui-loader .ui-icon {
+		background-image: url(themes/images/zelda.gif);
+	} 
+
+	.ui-icon-loading {  
+		background-image: url(themes/images/zelda.gif);
+		background-size: 46px 46px;
+	}

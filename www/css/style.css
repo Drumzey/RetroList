@@ -1,0 +1,84 @@
+html,body, div[data-role ="page"] {				
+				width: 100%;
+				margin: 0px;
+				padding: 0px;
+			}
+	 
+			.ui-content{				
+				width: 100%;
+				margin: 0 5vw 0 5vw;
+				padding: 0px;												
+			}
+	 
+			.SmallMargin{				
+				width: 90vw;	
+				margin-left: 5vw;				
+				margin-right: 5vw;
+				padding: 0px;												
+			}
+	 
+			#map {				
+				width: 100%;
+				padding: 0px;				
+			}
+		
+			.TwoColumn
+			{	
+				margin-top: 10px;				
+				-webkit-column-count: 2;
+				column-count: 2;	
+				-webkit-column-gap: 10px;
+				-moz-column-gap: 10px;
+				column-gap: 10vw;		
+			}
+			
+			.tile
+			{
+				margin: 0 0 2.5vw 0;
+				width: 40vw;
+				height: 40vw;
+				border-radius: 0em 2em 0em 0em !important;		
+				background-color: red !important;
+				border: 2px solid black !important;
+				
+				overflow: hidden; /* Fix for firefox and IE 10-11  */
+				-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+				page-break-inside: avoid; /* Deprecated Firefox */
+				-moz-column-break-inside:avoid; /* Current Firefox */
+				column-break-inside:avoid;
+				break-inside: avoid; /* IE 10+ */
+				break-inside: avoid-column;
+			}
+			
+			.workout
+			{
+				margin: 0 0 2.5vw 0;
+				width: 90vw;				
+				border-radius: 0em 2em 0em 0em !important;		
+				background-color: red !important;
+				border: 2px solid black !important;				
+			}
+			
+			.top-section {				
+				height:50%;
+			}
+			
+			.bottom-section {				
+				height:50%;
+				marin:8px;
+			}
+
+			.bottom-aligner {
+				display: inline-block;
+				height: 100%;
+				vertical-align: bottom;
+				width:1px;				
+			}
+			
+			.bottom-content {
+				display: inline-block;				
+			}
+
+			.top-content {
+				padding: 8px;
+			}

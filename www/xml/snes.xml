@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="GAMES">
+    <!-- Table markers -->
+    <table name="snes">        
+        <column name="name">Super Mario Bros 3</column>
+        <column name="releasse">1998</column>
+        <column name="genre">platformer</column>
+        <column name="region">PAL</column>        
+		<column name="developer">Rich</column>        
+    </table>
+    <table name="snes">
+         <column name="name">Super Mario Bros 2</column>
+        <column name="releasse">1998</column>
+        <column name="genre">platformer</column>
+        <column name="region">PAL</column>        
+		<column name="developer">Rich</column> 
+    </table>
+	<table name="snes">
+         <column name="name">Super Mario Bros</column>
+        <column name="releasse">1998</column>
+        <column name="genre">platformer</column>
+        <column name="region">PAL</column>        
+		<column name="developer">Rich</column> 
+    </table>
+	<table name="snes">
+         <column name="name">Tetris</column>
+        <column name="releasse">1998</column>
+        <column name="genre">Puzzle</column>
+        <column name="region">PAL</column>        
+		<column name="developer">Rich</column> 
+    </table>
+	<table name="snes">
+         <column name="name">Pinball dreams</column>
+        <column name="releasse">1998</column>
+        <column name="genre">arcade</column>
+        <column name="region">PAL</column>        
+		<column name="developer">Rich</column> 
+    </table>
+</database>
